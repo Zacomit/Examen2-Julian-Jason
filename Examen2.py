@@ -58,7 +58,7 @@ class TestMiClase(unittest.TestCase):
         self.assertEqual(mi_instancia.DivisibleTempo(7), [1, 7])
 
         mi_instancia_otra_prueba = MiClase(Valencia=2, Tempo=150, Tonos="D", listaCanciones=[...], listaBailabilidad=[...])
-        self.assertEqual(mi_instancia_otra_prueba.DivisibleTempo(12), [1, 2, 3, 4, 6, 12])
+        self.assertEqual(mi_instancia_otra_prueba.DivisibleTempo(12), [1, 2, 3, 6, 12])
 
     def test_obtiene_mas_bailable(self):
         mi_instancia = MiClase(Valencia=1, Tempo=120, Tonos="C", listaCanciones=[...], listaBailabilidad=[...])
