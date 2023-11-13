@@ -39,6 +39,7 @@ print(objeto.ObtieneValencia(1234567))  # Debería imprimir 4
 print(objeto.DivisibleTempo(10))  # Debería imprimir [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Debería imprimir 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Debería imprimir True
+print(objeto.Encuentra([1,2,3,4],6))
 
 ################################################################################################
 # Pruebas
@@ -73,6 +74,9 @@ class TestMiClase(unittest.TestCase):
         mi_instancia_otra_prueba = MiClase(Valencia=2, Tempo=150, Tonos="D", listaCanciones=[...], listaBailabilidad=[...])
         self.assertFalse(mi_instancia_otra_prueba.VerificaListaCanciones([1, None, 3]))
 
+    def test_encuentra(self):
+        mi_instancia = MiClase(Valencia=1, Tempo=120, Tonos="C", listaCanciones=[...], listaBailabilidad=[...])
+        self.assertTrue(mi_instancia.Encuentra([1, 2, 3, 4, 5], 3))
 
 if __name__ == '__main__':
     unittest.main()
